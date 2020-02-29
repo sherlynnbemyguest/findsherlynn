@@ -1,0 +1,71 @@
+.flexbox {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.inline-flex {
+	display: -webkit-inline-box;
+	display: -moz-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+
+.flex-direction (@direction, @orient) {
+	-webkit-box-direction: @direction;
+	-webkit-box-orient: @orient;
+	-moz-box-direction: @direction;
+	-moz-box-orient: @orient;
+}
+
+
+.flex-flow (@value) {
+	-webkit-flex-flow: @value;
+	-ms-flex-flow: @value;
+	flex-flow: @value;
+}
+
+.flex-order (@value) {
+	-webkit-box-ordinal-group: @value;
+	-moz-box-ordinal-group: @value;
+	-webkit-order: @value;
+	-ms-flex-order: @value;
+}
+
+.flex-grow (@value) {
+	-webkit-box-flex: @value;
+	-moz-box-flex: @value;
+	-webkit-flex-grow: @value;
+	-ms-flex: @value;
+	flex-grow: @value;
+}
+
+.flex-shrink (@value) {
+	-webkit-flex-shrink: @value;
+	-moz-flex-shrink: @valuet;
+	-ms-flex: @value;
+	flex-shrink: @value;
+}
+
+.flex-basis (@value) {
+	-webkit-flex-basis: @value;
+	flex-basis: @value;
+}
+
+.flex-justify (@value) {
+	-webkit-justify-content: @value;
+	justify-content: @value;
+}
+
+.flex-items (@value) {
+	-webkit-align-items: @value;
+	align-items: @value;
+}
+
+.flex-content (@value) {
+	-webkit-align-content: @value;
+	align-content: @value;
+}
