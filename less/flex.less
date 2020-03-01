@@ -1,4 +1,5 @@
-.h-flex {
+.h-flex,
+.d-flex {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -231,6 +232,9 @@
 
 /* IPAD and Tablet View */
 @media screen and (max-width: 769px) {
+	.d-flex {
+		display: unset;
+	}
 
 	.col-1,
 	.col-2,
