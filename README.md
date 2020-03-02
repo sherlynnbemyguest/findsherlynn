@@ -1,2 +1,2 @@
-# Sherlynn's Website
-https://sherlynnbemyguest.github.io/Sherlynn-website
+# Sherlynn's Site
+https://sherlynnbemyguest.github.io/findsherlynn/
