@@ -10,6 +10,7 @@ body {
 
 	svg {
 		width: 20px;
+		position: relative;
 	}
 }
 
@@ -30,7 +31,7 @@ h3 {
 }
 
 @Primary: #212529;
-@Secondary: #808080;
+@Secondary: #333;
 @Hover: #F20056;
 
 section {
@@ -38,18 +39,15 @@ section {
 	position: relative;
 	overflow: hidden;
 	background-color: #f2f2f2;
+	min-height: 100vh;
 }
 
-section.introduction {
-	height: 100vh;
-}
 
 section#about-me {
-	min-height: 100vh;
 	background-color: #fff;
 
 	.about-me {
-		padding: 20px 0 110px 0;
+		padding: 20px 0 170px 0;
 	}
 }
 
@@ -123,14 +121,14 @@ ul {
 		width: 100%;
 	}
 
-	.left-bracket,
-	.right-bracket,
+	.left-slash,
+	.right-slash,
 	.avatar {
 		height: 100%;
 	}
 
-	.left-bracket,
-	.right-bracket {
+	.left-slash,
+	.right-slash {
 		width: 20%;
 	}
 
@@ -138,8 +136,8 @@ ul {
 		width: 60%;
 	}
 
-	.right-bracket svg,
-	.left-bracket svg,
+	.right-slash svg,
+	.left-slash svg,
 	.avatar svg {
 		width: 100%;
 	}
@@ -187,6 +185,30 @@ ul {
 		-ms-transition: all 0.3s ease-out 0s;
 		-o-transition: all 0.3s ease-out 0s;
 		transition: all 0.3s ease-out 0s;
+
+		&:hover {
+			background: #6600d3;
+			border: 0;
+
+			svg {
+				.cls-1 {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}
+
+.title-wrap {
+	svg {
+		width: 34px;
+		top: 15px;
+	}
+
+	.left-bracket {
+		svg {
+			transform: rotate(180deg);
+		}
 	}
 }
 
@@ -196,6 +218,10 @@ ul {
 	background-color: #6600d3;
 	width: 100%;
 	padding: 20px 0;
+
+	h3 {
+		color: #fff;
+	}
 
 	li {
 		padding: 10px 20px;

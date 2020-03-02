@@ -875,9 +875,10 @@ body a {
 }
 body svg {
   width: 20px;
+  position: relative;
 }
 body p {
-  color: #808080;
+  color: #333;
 }
 h1 {
   font-size: 60px;
@@ -893,16 +894,13 @@ section {
   position: relative;
   overflow: hidden;
   background-color: #f2f2f2;
-}
-section.introduction {
-  height: 100vh;
+  min-height: 100vh;
 }
 section#about-me {
-  min-height: 100vh;
   background-color: #fff;
 }
 section#about-me .about-me {
-  padding: 20px 0 110px 0;
+  padding: 20px 0 170px 0;
 }
 .container {
   max-width: 1040px;
@@ -963,20 +961,20 @@ ul li {
   height: 100%;
   width: 100%;
 }
-.frame-wrap .left-bracket,
-.frame-wrap .right-bracket,
+.frame-wrap .left-slash,
+.frame-wrap .right-slash,
 .frame-wrap .avatar {
   height: 100%;
 }
-.frame-wrap .left-bracket,
-.frame-wrap .right-bracket {
+.frame-wrap .left-slash,
+.frame-wrap .right-slash {
   width: 20%;
 }
 .frame-wrap .avatar {
   width: 60%;
 }
-.frame-wrap .right-bracket svg,
-.frame-wrap .left-bracket svg,
+.frame-wrap .right-slash svg,
+.frame-wrap .left-slash svg,
 .frame-wrap .avatar svg {
   width: 100%;
 }
@@ -1018,12 +1016,29 @@ ul li {
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
+.social-media a:hover {
+  background: #6600d3;
+  border: 0;
+}
+.social-media a:hover svg .cls-1 {
+  fill: #fff;
+}
+.title-wrap svg {
+  width: 34px;
+  top: 15px;
+}
+.title-wrap .left-bracket svg {
+  transform: rotate(180deg);
+}
 #call-to-action {
   position: absolute;
   bottom: 0;
   background-color: #6600d3;
   width: 100%;
   padding: 20px 0;
+}
+#call-to-action h3 {
+  color: #fff;
 }
 #call-to-action li {
   padding: 10px 20px;
