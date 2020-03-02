@@ -1038,7 +1038,7 @@ ul li {
   padding: 20px 0;
 }
 #call-to-action h3 {
-  color: #fff;
+  color: #fff!important;
 }
 #call-to-action li {
   padding: 10px 20px;
