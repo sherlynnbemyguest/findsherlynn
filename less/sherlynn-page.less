@@ -1,3 +1,7 @@
+html.no-scroll{
+	overflow-y: hidden;
+}
+
 body {
 	width: 100%;
 	overflow-x: hidden;
@@ -15,7 +19,12 @@ body {
 
 	a {
 		text-decoration: none;
+
+		&:hover, &:focus{
+			text-decoration: underline;
+		}
 	}
+	
 
 	svg {
 		width: 20px;
@@ -191,10 +200,106 @@ section#about-me {
 	}
 }
 
+#portfolio, .contact-me{
+	padding: 54px 0;
+}
+
+#portfolio{
+	background-color: #fafafa;
+	position: relative;
+	padding-bottom: 0;
+	
+	.card{
+		position: relative;
+		min-width: 380px;
+		max-width: 380px;
+		margin-left: -20px;
+
+		.img-cont{
+			width: 248px;
+			position: absolute;
+			top: 10px;
+			left: 80px;
+
+			img{
+				width: 100%;
+				object-fit: cover;
+				object-position: top;
+				height: 154px;
+
+				transition: 2s all ease;
+			}
+
+			&:hover {
+				img{
+					object-position: bottom;
+				}
+			}
+		}
+
+		.svg-cont{
+			min-width: 380px;
+		}
+	}
+}
+
+.lightbox{
+	transition: all 0.8s ease;
+	background: linear-gradient(117.61deg, #FC466B 5.52%, #3F5EFB 115.27%);
+	opacity: 0;
+	visibility: hidden;
+
+	width: 100%;
+	height: 100%;
+
+	left: 0;
+	top: 0;
+	position: fixed;
+	z-index: 1;
+
+	overflow-y: scroll;
+
+	.container{
+		position: relative;
+		max-width: 700px;
+	}
+
+	p, a{
+		color: #fff;
+	}
+
+	span{
+		color: #ececec;
+		font-size: 14px;
+	}
+
+	.lightbox img{
+		max-width: 500px;
+		margin: auto;
+	}
+
+	.lightbox__close{
+		position: absolute;
+		right: 22px;
+		top: 22px;
+		color: #fff;
+		font-size: 32px;
+		transform: rotate(90deg);
+		padding: 4px 8px;
+
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.lightbox:target {
+	opacity: 1;
+	visibility: visible;
+}
+
 .contact-me{
 	background: linear-gradient(35.14deg, #FF8600 -13.67%, #F9007D 108.16%);
-	padding: 54px 0;
-	margin-top: 100px;
 
 	p, a{
 		color: #fff;
@@ -290,6 +395,27 @@ section#about-me {
 			}
 		}
 	
+	}
+
+	#portfolio{
+		.card{
+			min-width: 280px;
+			max-width: 280px;
+
+			.img-cont{
+				width: 182px;
+				top: 7px;
+				left: 64px;
+
+				img{
+					height: 116px;
+				}
+			}
+
+			.svg-cont{
+				min-width: 280px;
+			}
+		}
 	}
 	
 	.contact-me{

@@ -14,4 +14,12 @@ $(document).ready(function(){
       });
     } 
   });
+
+  $(".open-modal").click(function(){
+    $("html").addClass("no-scroll");
+  });
+
+  $(".lightbox__close").click(function(){
+    $("html").removeClass("no-scroll");
+  });
 });

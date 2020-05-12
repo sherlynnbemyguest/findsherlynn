@@ -627,67 +627,68 @@ textarea {
   flex-basis: 0;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  max-width: 100%;
+  width: 100%;
+  float: left;
 }
 .col.s1 {
   -ms-flex: 0 0 8.333333%;
   flex: 0 0 8.333333%;
-  max-width: 8.333333%;
+  width: 8.333333%;
 }
 .col.s2 {
   -ms-flex: 0 0 16.666666%;
   flex: 0 0 16.666666%;
-  max-width: 16.666666%;
+  width: 16.666666%;
 }
 .col.s3 {
   -ms-flex: 0 0 25%;
   flex: 0 0 25%;
-  max-width: 25%;
+  width: 25%;
 }
 .col.s4 {
   -ms-flex: 0 0 33.333333%;
   flex: 0 0 33.333333%;
-  max-width: 33.333333%;
+  width: 33.333333%;
 }
 .col.s5 {
   -ms-flex: 0 0 41.666666%;
   flex: 0 0 41.666666;
-  max-width: 41.666666%;
+  width: 41.666666%;
 }
 .col.s6 {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
-  max-width: 50%;
+  width: 50%;
 }
 .col.s7 {
   -ms-flex: 0 0 58.333333%;
   flex: 0 0 58.333333%;
-  max-width: 58.333333%;
+  width: 58.333333%;
 }
 .col.s8 {
   -ms-flex: 0 0 66.666666%;
   flex: 0 0 66.666666%;
-  max-width: 66.666666%;
+  width: 66.666666%;
 }
 .col.s9 {
   -ms-flex: 0 0 75%;
   flex: 0 0 75%;
-  max-width: 75%;
+  width: 75%;
 }
 .col.s10 {
   -ms-flex: 0 0 83.333333%;
   flex: 0 0 83.333333%;
-  max-width: 83.333333%;
+  width: 83.333333%;
 }
 .col.s11 {
   -ms-flex: 0 0 91.666666%;
   flex: 0 0 91.666666%;
-  max-width: 91.666666%;
+  width: 91.666666%;
 }
 .col.s12 {
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
-  max-width: 100%;
+  width: 100%;
 }
 .col {
   padding-left: 15px;
@@ -739,7 +740,7 @@ textarea {
   .col.t12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-    max-width: 100%;
+    width: 100%;
   }
 }
 .flexbox {
@@ -871,6 +872,9 @@ textarea {
   -webkit-background-clip: text;
   color: transparent;
 }
+html.no-scroll {
+  overflow-y: hidden;
+}
 body {
   width: 100%;
   overflow-x: hidden;
@@ -890,6 +894,10 @@ body h5 {
 }
 body a {
   text-decoration: none;
+}
+body a:hover,
+body a:focus {
+  text-decoration: underline;
 }
 body svg {
   width: 20px;
@@ -1021,10 +1029,87 @@ section#about-me .bg-slash img:first-child {
 .btn-round img {
   margin-right: 15px;
 }
+#portfolio,
+.contact-me {
+  padding: 54px 0;
+}
+#portfolio {
+  background-color: #fafafa;
+  position: relative;
+  padding-bottom: 0;
+}
+#portfolio .card {
+  position: relative;
+  min-width: 380px;
+  max-width: 380px;
+  margin-left: -20px;
+}
+#portfolio .card .img-cont {
+  width: 248px;
+  position: absolute;
+  top: 10px;
+  left: 80px;
+}
+#portfolio .card .img-cont img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  height: 154px;
+  transition: 2s all ease;
+}
+#portfolio .card .img-cont:hover img {
+  object-position: bottom;
+}
+#portfolio .card .svg-cont {
+  min-width: 380px;
+}
+.lightbox {
+  transition: all 0.8s ease;
+  background: linear-gradient(117.61deg, #FC466B 5.52%, #3F5EFB 115.27%);
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  overflow-y: scroll;
+}
+.lightbox .container {
+  position: relative;
+  max-width: 700px;
+}
+.lightbox p,
+.lightbox a {
+  color: #fff;
+}
+.lightbox span {
+  color: #ececec;
+  font-size: 14px;
+}
+.lightbox .lightbox img {
+  max-width: 500px;
+  margin: auto;
+}
+.lightbox .lightbox__close {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  color: #fff;
+  font-size: 32px;
+  transform: rotate(90deg);
+  padding: 4px 8px;
+}
+.lightbox .lightbox__close:hover {
+  text-decoration: none;
+}
+.lightbox:target {
+  opacity: 1;
+  visibility: visible;
+}
 .contact-me {
   background: linear-gradient(35.14deg, #FF8600 -13.67%, #F9007D 108.16%);
-  padding: 54px 0;
-  margin-top: 100px;
 }
 .contact-me p,
 .contact-me a {
@@ -1097,6 +1182,21 @@ section#about-me .bg-slash img:first-child {
   }
   section#about-me .bg-slash img:first-child {
     margin-right: -68px;
+  }
+  #portfolio .card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+  #portfolio .card .img-cont {
+    width: 182px;
+    top: 7px;
+    left: 64px;
+  }
+  #portfolio .card .img-cont img {
+    height: 116px;
+  }
+  #portfolio .card .svg-cont {
+    min-width: 280px;
   }
   .contact-me {
     margin-top: 50px;
