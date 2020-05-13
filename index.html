@@ -10,6 +10,16 @@
 	<link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 	<link href="main.css" rel="stylesheet">
+
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166484478-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-166484478-1');
+	</script>
 </head>
     <body>
 		<section class="introduction h-flex items-center">
@@ -296,7 +306,7 @@
 					</div>
 					<div class="col s12 text-wrap mb2 t-center">
 						<p>
-							<a class="t-rainbow" href="https://www.ewins-group.com/" target="_blank" aria-label="link to Ewins website">Ewins Website</a>
+							<a class="t-rainbow" href="https://www.ewins-group.com/" target="_blank" aria-label="link to Ewins website" rel="noreferrer">Ewins Website</a>
 						</p>
 					</div>
 				</div>
@@ -338,10 +348,10 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="https://resume.io/r/e7qDQJcWd"  target="_blank">Download CV</a>
+								<a href="https://resume.io/r/e7qDQJcWd" aria-label="Link to CV" rel="noreferrer" onclick=”ga(‘send’, ‘event’, [Link], [Visit], [View CV]);”  target="_blank">Download CV</a>
 							</td>
 							<td>
-								<a href="mailto:sherlynngailparreno?subject=Collaboration project">Contact Me</a>
+								<a href="mailto:sherlynngailparreno?subject=Collaboration project" aria-label="Email me" rel="noreferrer">Contact Me</a>
 							</td>
 						</tr>
 					</table>
@@ -349,6 +359,6 @@
 			</div>
 		</section>
 	</body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="main.js"></script>
 </html>

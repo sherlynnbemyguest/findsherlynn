@@ -1175,6 +1175,9 @@ section#about-me .bg-slash img:first-child {
     padding-top: 40px;
     min-height: 90vh;
   }
+  section#about-me .col.s12 {
+    padding-right: 30px;
+  }
   section#about-me p {
     font-size: 16px;
   }
