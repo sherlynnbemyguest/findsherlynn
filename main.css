@@ -944,6 +944,9 @@ section.introduction h4 {
 section.introduction a {
   color: #fff;
 }
+section.introduction a:hover {
+  text-decoration: none;
+}
 section.introduction .container {
   max-width: 700px;
 }
@@ -995,7 +998,7 @@ section#about-me .bg-loading {
   left: 8%;
 }
 section#about-me .bg-greaterThan {
-  top: 24%;
+  top: 36%;
   left: 6%;
   opacity: 0.1;
 }
@@ -1062,6 +1065,10 @@ section#about-me .bg-slash img:first-child {
 }
 #portfolio .card .svg-cont {
   min-width: 380px;
+  margin-bottom: 12px;
+}
+#portfolio .card .text-wrap p {
+  padding-left: 12px;
 }
 .lightbox {
   transition: all 0.8s ease;
@@ -1088,9 +1095,8 @@ section#about-me .bg-slash img:first-child {
   color: #ececec;
   font-size: 14px;
 }
-.lightbox .lightbox img {
-  max-width: 500px;
-  margin: auto;
+.lightbox img {
+  width: 100%;
 }
 .lightbox .lightbox__close {
   position: absolute;
@@ -1167,6 +1173,7 @@ section#about-me .bg-slash img:first-child {
   }
   section#about-me {
     padding-top: 40px;
+    min-height: 90vh;
   }
   section#about-me p {
     font-size: 16px;
@@ -1183,21 +1190,6 @@ section#about-me .bg-slash img:first-child {
   section#about-me .bg-slash img:first-child {
     margin-right: -68px;
   }
-  #portfolio .card {
-    min-width: 280px;
-    max-width: 280px;
-  }
-  #portfolio .card .img-cont {
-    width: 182px;
-    top: 7px;
-    left: 64px;
-  }
-  #portfolio .card .img-cont img {
-    height: 116px;
-  }
-  #portfolio .card .svg-cont {
-    min-width: 280px;
-  }
   .contact-me {
     margin-top: 50px;
     font-size: 18px;
@@ -1212,5 +1204,22 @@ section#about-me .bg-slash img:first-child {
   .contact-me table td {
     width: 50%;
     min-width: auto;
+  }
+}
+@media screen and (max-width: 360px) {
+  #portfolio .card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+  #portfolio .card .img-cont {
+    width: 182px;
+    top: 7px;
+    left: 64px;
+  }
+  #portfolio .card .img-cont img {
+    height: 116px;
+  }
+  #portfolio .card .svg-cont {
+    min-width: 280px;
   }
 }
